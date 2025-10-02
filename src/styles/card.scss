@@ -4,30 +4,30 @@
   --column-count: 1;
 }
 
-.conrainer {
+.container {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(var(--column-count), 200px);
   padding: $card-container-padding;
   gap: 48px 46px;
-  justify-content: center;
+  place-content: center;
   justify-items: center;
 }
 
 @media (min-width: 488px) {
-  .conrainer {
+  .container {
     --column-count: 2;
   }
 }
 
 @media (min-width: 768px) {
-  .conrainer {
+  .container {
     --column-count: 3;
   }
 }
 
 @media (min-width: 1024px) {
-  .conrainer {
+  .container {
     --column-count: 4;
   }
 }
@@ -42,6 +42,7 @@
   border: 1px solid #f3f3f3;
   border-radius: $border-radius;
   transition: transform $smooth-transition;
+  will-change: transform;
   &:hover {
     transform: scale(1.2);
   }
@@ -126,10 +127,6 @@
       background-color: $button-color-hover;
       border: 1px solid $color-accent;
       color: $color-accent;
-
-      transition:
-        background-color $smooth-transition,
-        color $smooth-transition;
     }
   }
 }
