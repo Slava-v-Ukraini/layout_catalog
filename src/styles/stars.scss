@@ -1,12 +1,14 @@
+@import 'variables';
+
 .stars {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: $stars-gap;
   .stars__star {
     background-image: url(../images/star.svg);
 
-    width: 16px;
-    height: 16px;
+    width: $stars-size;
+    height: $stars-size;
     background-repeat: no-repeat;
     background-position: center;
   }

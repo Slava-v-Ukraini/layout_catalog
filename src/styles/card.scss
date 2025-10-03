@@ -7,7 +7,7 @@
 .container {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(var(--column-count), 200px);
+  grid-template-columns: repeat(var(--column-count), $card-width);
   padding: $card-container-padding;
   gap: 46px 48px;
   place-content: center;
@@ -34,7 +34,7 @@
 
 .card {
   padding: $card-padding;
-  width: 200px;
+  width: $card-width;
   overflow: visible;
   box-sizing: border-box;
   transition: transform $smooth-transition;
@@ -63,7 +63,7 @@
     color: $color-primary;
   }
   &:hover .card__title {
-    color: #34568b;
+    color: $title-hover-color;
   }
   &__code {
     margin: 4px 0 0;
