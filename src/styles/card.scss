@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(var(--column-count), 200px);
   padding: $card-container-padding;
-  gap: 48px 46px;
+  gap: 46px 48px;
   place-content: center;
   justify-items: center;
 }
@@ -35,14 +35,12 @@
 .card {
   padding: $card-padding;
   width: 200px;
-  height: 100%;
-
+  overflow: visible;
   box-sizing: border-box;
+  transition: transform $smooth-transition;
 
   border: 1px solid #f3f3f3;
   border-radius: $border-radius;
-  transition: transform $smooth-transition;
-  will-change: transform;
   &:hover {
     transform: scale(1.2);
   }
@@ -51,10 +49,13 @@
     margin-bottom: 40px;
     width: 160px;
     height: 134px;
+    margin-inline: auto;
+    display: block;
   }
   &__title {
     transition: color $smooth-transition;
     align-self: center;
+    height: 36px;
     margin: $margin-reset;
     font-size: $font-size-base;
     line-height: $main-line-height;
